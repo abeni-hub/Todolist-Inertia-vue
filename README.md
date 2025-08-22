@@ -37,5 +37,5 @@ I started this project to **learn and understand the concepts of Laravel Inertia
 - Improve UI with **TailwindCSS**  
 - Deploy to production
 
-git clone https://github.com/your-username/todolist-inertia-vue.git
+git clone https://github.com/abeni-hub/Todolist-Inertia-vue/
 cd todolist-inertia-vue
