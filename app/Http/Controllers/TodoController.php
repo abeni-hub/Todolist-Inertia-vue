@@ -33,9 +33,20 @@ class TodoController extends Controller
         return redirect()->back();
     }
 
-    public function update(Todo $todo)
+    public function toggle(Todo $todo)  // Renamed from 'update' for clarity
     {
         $todo->update(['completed' => !$todo->completed]);
+        return redirect()->back();
+    }
+
+    public function updateTask(Request $request, Todo $todo)  // New method for editing task
+    {
+        $validated = $request->validate([
+            'task' => 'required|string|max:255',
+        ]);
+
+        $todo->update($validated);
+
         return redirect()->back();
     }
 }
